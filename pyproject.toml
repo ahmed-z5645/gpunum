@@ -1,1 +1,23 @@
-# python package building here!
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gpunum"
+version = "0.1.0"
+description = "A GPU-accelerated statistical library similar to NumPy"
+authors = [
+  { name="Ahmed Zafar", email="ahmed.zafar5645@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pyopencl",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"gpunum.kernels" = ["*.cl"]

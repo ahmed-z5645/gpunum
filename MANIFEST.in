@@ -1,1 +1,1 @@
-# Will add files to include .cl files here
+recursive-include src/gpunum/kernels *.cl
